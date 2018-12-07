@@ -1,21 +1,23 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package colegio;
 
-/**
- *
- * @author Aluno
- */
+package com.fieb.senai.app;
+
+import com.fieb.senai.entidades.Endereco;
+import com.fieb.senai.entidades.Pessoa;
+
+
 public class Colegio {
 
-    /**
-     * @param args the command line arguments
-     */
+   
     public static void main(String[] args) {
-        // TODO code application logic here
+        Pessoa p1 = new Pessoa("Joao", 568989,25);
+        Endereco end1 = new Endereco("Rua A", "25", "Aguas Claras");
+        
+        p1.setEndereco(end1);
+        
+        Pessoa p2 = new Pessoa("Maria", 568980,20);
+        Endereco end2 = new Endereco("Rua B", "5", "Paripe");
+        
+        p2.setEndereco(end2);
     }
     
 }
