@@ -3,10 +3,8 @@
 package com.fieb.senai.entidades;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
-import java.util.Set;
 
 
 public class Pessoa {
@@ -17,25 +15,18 @@ public class Pessoa {
     
     private Endereco endereco;
 
-   
-    
-    Set<Telefone> telefone = new HashSet<>();
+   private List<Telefone> telefone = new ArrayList<>();
 
-    public Set<Telefone> getTelefone() {
+    public List<Telefone> getTelefone() {
         return telefone;
     }
 
-    public void setTelefone(Set<Telefone> telefone) {
-        this.telefone = telefone;
+    public void setTelefone(List<Telefone> telefone) {
+        this.telefone.addAll(telefone);
     }
-
    
-    
-    
-    
-    
-
-    public Pessoa(String nome, Integer matricula, Integer idade) {
+           
+   public Pessoa(String nome, Integer matricula, Integer idade) {
         this.nome = nome;
         this.matricula = matricula;
         this.idade = idade;
